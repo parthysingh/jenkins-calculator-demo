@@ -67,11 +67,11 @@ class TestCalculator(unittest.TestCase):
         """Test modulo by zero raises error"""
         with self.assertRaises(ValueError):
             self.calc.modulo(10, 0)
-    
+     
     # Uncomment this test to demonstrate a FAILING build in Jenkins
-    # def test_intentional_failure(self):
-    #     """This test is intentionally wrong to show Jenkins failure detection"""
-    #     self.assertEqual(self.calc.add(2, 2), 5)  # Wrong answer!
+    def test_intentional_failure(self):
+        """This test is intentionally wrong to show Jenkins failure detection"""
+        self.assertEqual(self.calc.add(2, 2), 5)  # Wrong answer!
 
 
 class TestCalculatorEdgeCases(unittest.TestCase):
